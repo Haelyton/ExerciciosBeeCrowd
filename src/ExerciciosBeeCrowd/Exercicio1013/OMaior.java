@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class OMaior {
 
     public static Integer MaiorAb(int A, int B) {
-        return (A + B + (A - B)) / 2;
+        return (A + B + Math.abs(A - B)) / 2;
     }
 
     public static void main(String[] args) {
@@ -16,12 +16,9 @@ public class OMaior {
         int C = scanner.nextInt();
 
         int maiorA = MaiorAb(A, B);
-        int maiorB = MaiorAb(B, A);
 
-        if (maiorA > C && maiorA > maiorB){
+        if (maiorA > C){
             System.out.printf(maiorA + " eh o maior\n");
-        }else if (maiorB > C){
-            System.out.printf(maiorB + " eh o maior\n");
         }else {
             System.out.printf(C + " eh o maior\n");
         }
